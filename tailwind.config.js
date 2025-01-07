@@ -11,6 +11,12 @@ export default {
       colors: {
         'primary': 'rgba(var(--primary-color))',
       },
+      screens: {
+        'sm': '575px',
+        'lg': '968px',
+        'xl': '1280px',
+        '2xl': '1440px',
+      },
     }
   },
 

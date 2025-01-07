@@ -2,6 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+  height: 300vh;
+}
 
 @layer base {
   :root {
@@ -9,6 +12,6 @@
   }
 
   .container {
-    @apply px-4;
+    @apply px-4 mx-auto;
   }
 }
