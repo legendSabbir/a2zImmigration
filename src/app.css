@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@layer base {
+  :root {
+    --primary-color: 6, 163, 218;
+  }
+
+  .container {
+    @apply px-4;
+  }
+}
