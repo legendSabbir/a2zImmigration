@@ -15,3 +15,12 @@ body {
     @apply px-4 mx-auto;
   }
 }
+
+
+.camera_next {
+  @apply right-0 md:right-1 top-[55%] md:top-1/2 after:text-xl after:font-bold after:p-2 after:content-["\00BB"] after:text-white  md:after:bg-white md:after:px-4 md:after:py-3 md:after:text-primary md:after:text-2xl;
+}
+
+.camera_prev {
+  @apply left-0 top-[55%] md:top-1/2 after:text-xl after:font-bold after:p-2 after:content-["\00AB"] after:text-white md:after:bg-white md:after:px-4 md:after:py-3 md:after:text-primary md:after:text-2xl;
+}

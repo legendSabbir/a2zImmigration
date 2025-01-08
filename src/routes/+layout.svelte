@@ -7,7 +7,7 @@
   import Close from '~icons/heroicons-solid/x';
 	let { children } = $props();
 
-  let isVisible = $state(false);
+  let isVisible = $state(true);
   let isNavOpen = $state(false);
 
   function viewport(node, options) {
@@ -117,6 +117,6 @@
 <style>
   .nav-link {
     @apply h-full flex items-center px-6 lg:px-2 py-3 lg:py-0 font-medium font-nunito text-lg transition-colors hover:text-primary relative
-      after:hidden lg:flex after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:transition-transform after:duration-300 hover:after:bg-primary after:scale-x-0 hover:after:scale-x-100;
+      after:hidden lg:after:block after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:transition-transform after:duration-300 hover:after:bg-primary after:scale-x-0 hover:after:scale-x-100;
   }
 </style>
