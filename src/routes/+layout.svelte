@@ -40,16 +40,16 @@
   !isVisible && "motion-translate-x-in-[0%] motion-translate-y-in-[-100%]"
 ]}>
 
-  <div class={["py-2 pl-2 pr-0 lg:px-12 border-b border-gray-200 items-center gap-5 hidden lg:flex", !isVisible && "lg:hidden"]}>
-    <div class="flex items-center gap-1 text-gray-500 hover:text-gray-950 text-sm font-medium">
+  <div class={["py-2 pl-2 pr-0 lg:px-12 bg-slate-900 items-center gap-6 hidden lg:flex", !isVisible && "lg:hidden"]}>
+    <div class="flex items-center gap-1 text-gray-100 hover:text-primary font-nunito font-medium">
       <Location />
       <span>123 Street, New York, NY 10012</span>
     </div>
-    <div class="flex items-center gap-1 text-gray-500 hover:text-gray-950 text-sm font-medium">
+    <div class="flex items-center gap-1 text-gray-100 hover:text-primary font-nunito font-medium">
       <Phone />
       <span>+1 (123) 456-7890</span>
     </div>
-    <div class="flex items-center gap-1 text-gray-500 hover:text-gray-950 text=sm font-medium">
+    <div class="flex items-center gap-1 text-gray-100 hover:text-primary font-nunito font-medium">
       <Mail />
       <span>info@example.com</span>
     </div>
