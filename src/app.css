@@ -4,6 +4,7 @@
 
 body {
   height: 300vh;
+  @apply bg-slate-100;
 }
 
 @layer base {
