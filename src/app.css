@@ -15,6 +15,10 @@ body {
   .container {
     @apply px-4 mx-auto;
   }
+
+  .viewport {
+    @apply translate-y-10 scale-0 data-[visible]:scale-100 data-[visible]:translate-y-0 transition-all duration-500 ease-out;
+  }
 }
 
 

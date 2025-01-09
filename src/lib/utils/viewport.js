@@ -1,4 +1,4 @@
-const io = new IntersectionObserver(entries => {
+const io = typeof IntersectionObserver === 'undefined' ? null : new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const el = entry.target;
