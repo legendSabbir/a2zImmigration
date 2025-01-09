@@ -1,6 +1,8 @@
 <script>
-  import Facts from "$lib/components/home/Facts.svelte";
+  import Blog from "$lib/components/home/Blog.svelte";
+import Facts from "$lib/components/home/Facts.svelte";
   import Hero from "$lib/components/home/Hero.svelte";
+  import Message from "$lib/components/home/Message.svelte";
   import Services from "$lib/components/home/Services.svelte";
   import Welcome from "$lib/components/home/Welcome.svelte";
   import Works from "$lib/components/home/Works.svelte";
@@ -20,4 +22,6 @@
   <Welcome />
   <Services />
   <Works />
+  <Message />
+  <Blog />
 </main>

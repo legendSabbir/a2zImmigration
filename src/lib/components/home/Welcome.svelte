@@ -3,7 +3,7 @@
 </script>
 
 
-<section class="py-20 lg:py-16">
+<section class="py-20 lg:py-28">
   <div class="container grid gap-10 lg:gap-20 lg:grid-cols-2">
 
     <div class="grid place-items-center">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="grid place-items-center viewport" use:viewport>
-      <img src="/images/banner-1.svg" alt="hero banner" class="max-w-md">
+      <img src="/images/banner-1.svg" alt="hero banner" class="w-full max-w-md">
     </div>
 
   </div>
