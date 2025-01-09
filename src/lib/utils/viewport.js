@@ -1,21 +1,20 @@
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      el.dispatchEvent(new CustomEvent('enterViewport'));
+      el.dataset.visible = true;
+      io.unobserve(el);
+    }
+  })
+});
 
-
-export function viewport(node, options) {
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        node.dispatchEvent(new CustomEvent('enterViewport'));
-      } else {
-        node.dispatchEvent(new CustomEvent('exitViewport'));
-      }
-    });
-  }, options);
-
+export function viewport(node) {
   io.observe(node);
 
   return {
     destroy() {
-      io.disconnect();
+      io.unobserve(node);
     }
   };
 }

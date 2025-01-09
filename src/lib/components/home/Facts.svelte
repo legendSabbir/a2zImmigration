@@ -4,6 +4,7 @@
   import Check from '~icons/ic/round-check';
   import { Tween } from "svelte/motion";
   import { linear } from "svelte/easing";
+  import { viewport } from '$lib/utils/viewport';
 
 
   const clients = new Tween(0, {
@@ -22,48 +23,12 @@
     delay: 600,
     easing: linear,
   });
-
-
-  let io;
-
-  function observe(el) {
-    if (!io) {
-      io = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.dataset.visible = 'true';
-            observer.unobserve(entry.target);
-
-            if (entry.target.dataset.name === "clients") {
-              clients.target = 60
-            }
-
-            if (entry.target.dataset.name === "reviews") {
-              reviews.target = 60
-            }
-
-            if (entry.target.dataset.name === "success") {
-              success.target = 100
-            }
-          }
-        });
-      });
-    }
-
-    io.observe(el);
-
-    return {
-      destroy() {
-        io.unobserve(el);
-      },
-    };
-  }
 </script>
 
 <section class="pt-16 lg:pt-0 lg:pb-16">
   <div class="container relative">
     <div class="w-full max-w-[968px] z-10 lg:absolute top-0 left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:flex">
-      <div class="h-[120px] lg:h-[150px] flex pl-10 pr-4 items-center gap-6 bg-primary flex-1 scale-0 data-[visible]:scale-100 transition-transform duration-[700ms] ease-out shadow-xl" data-name="clients" use:observe>
+      <div class="h-[120px] lg:h-[150px] flex pl-10 pr-4 items-center gap-6 bg-primary flex-1 scale-0 data-[visible]:scale-100 transition-transform duration-[700ms] ease-out shadow-xl" onenterViewport={() => clients.target = 60} use:viewport>
         <div class="p-3.5 bg-white text-primary">
           <People height="32" width="32" />
         </div>
@@ -74,7 +39,7 @@
         </div>
       </div>
   
-      <div class="h-[120px] lg:h-[150px] flex pl-10 pr-4 items-center gap-6 bg-slate-200 flex-1 scale-0 data-[visible]:scale-100 duration-[700ms] delay-[200ms] transition-transform ease-out shadow-xl" data-name="reviews" use:observe>
+      <div class="h-[120px] lg:h-[150px] flex pl-10 pr-4 items-center gap-6 bg-slate-200 flex-1 scale-0 data-[visible]:scale-100 duration-[700ms] delay-[200ms] transition-transform ease-out shadow-xl" onenterViewport={() => reviews.target = 60}  use:viewport>
         <div class="p-3.5 bg-primary text-white">
           <Star height="32" width="32" />
         </div>
@@ -85,7 +50,7 @@
         </div>
       </div>
   
-      <div class="h-[120px] lg:h-[150px] flex pl-10 pr-4 items-center gap-6 bg-primary flex-1 scale-0 data-[visible]:scale-100 duration-[700ms] delay-[400ms] transition-transform ease-out shadow-xl" data-name="success" use:observe>
+      <div class="h-[120px] lg:h-[150px] flex pl-10 pr-4 items-center gap-6 bg-primary flex-1 scale-0 data-[visible]:scale-100 duration-[700ms] delay-[400ms] transition-transform ease-out shadow-xl" onenterViewport={() => success.target = 100} use:viewport>
         <div class="p-3.5 bg-white text-primary">
           <Check height="32" width="32" />
         </div>
