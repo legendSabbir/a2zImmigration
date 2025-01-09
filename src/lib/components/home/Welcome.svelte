@@ -8,7 +8,7 @@
 
     <div class="grid place-items-center">
       <div>
-        <h2 class="text-slate-800 text-center lg:text-left text-2xl md:text-3xl xl:text-4xl font-bold mb-8 viewport" use:viewport>Welcome to A2Z Immigration</h2>
+        <h2 class="section-title lg:text-left mb-8 scale-100 viewport" use:viewport>Welcome to A2Z Immigration</h2>
         <div use:viewport class="viewport">
           <p class="font-nunito font-medium md:text-lg text-slate-600 mb-6">A2Z Immigration Solution Limited has spent the last 5 years as region leader in UK Immigration Law. We have been a fully OISC regulated immigration firm for over 5 years now and have
             specialised in immigration matters.

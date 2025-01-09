@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@iconify-json/fa-solid':
+        specifier: ^1.2.1
+        version: 1.2.1
       '@iconify-json/heroicons-solid':
         specifier: ^1.2.1
         version: 1.2.1
@@ -17,6 +20,9 @@ importers:
       '@iconify-json/mdi':
         specifier: ^1.2.2
         version: 1.2.2
+      '@iconify-json/wpf':
+        specifier: ^1.2.0
+        version: 1.2.0
       '@sveltejs/adapter-static':
         specifier: ^3.0.8
         version: 3.0.8(@sveltejs/kit@2.15.1(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.16.5)(vite@5.4.11))(svelte@5.16.5)(vite@5.4.11))
@@ -202,6 +208,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@iconify-json/fa-solid@1.2.1':
+    resolution: {integrity: sha512-eEcnCb6yjRJ0bZrQQZOvO9P5PYCGujz2V8PpiIxBSlm6xqoVLNtOfUyPr6xZD4zWeW7H3cmWi2ZXSzqxQ5e4lw==}
+
   '@iconify-json/heroicons-solid@1.2.1':
     resolution: {integrity: sha512-sRZ6U1FT1lkxtIuL+iQ9Fpm5IZxvJCDaKdLpP5elgZ6OkQn6j8HVJpxgFIcuJbHC/EeoNp3tHldMEELqN9pZDQ==}
 
@@ -210,6 +219,9 @@ packages:
 
   '@iconify-json/mdi@1.2.2':
     resolution: {integrity: sha512-84aznJXzfGdbOXGe8xB7E5uNAb7Yo5IABwTgq2X3kczb819qZeS9eL31bTVn7wJdCLK5ieaoUc2GTS3QYIkJ6g==}
+
+  '@iconify-json/wpf@1.2.0':
+    resolution: {integrity: sha512-sA5z2Fy0rh6+wSMlXpj5Of4oRXZTn84zQFo2yWTtjbN5WTrH52iJrT4KLmepnF8l5VAsf+WbeXsQLFFhlVeDFA==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -1113,6 +1125,10 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
+  '@iconify-json/fa-solid@1.2.1':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/heroicons-solid@1.2.1':
     dependencies:
       '@iconify/types': 2.0.0
@@ -1122,6 +1138,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/mdi@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/wpf@1.2.0':
     dependencies:
       '@iconify/types': 2.0.0
 

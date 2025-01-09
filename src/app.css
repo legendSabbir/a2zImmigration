@@ -3,7 +3,6 @@
 @import 'tailwindcss/utilities';
 
 body {
-  height: 300vh;
   @apply bg-slate-100;
 }
 
@@ -16,8 +15,12 @@ body {
     @apply px-4 mx-auto;
   }
 
+  .section-title {
+    @apply text-slate-800 text-center text-2xl md:text-3xl xl:text-4xl font-bold;
+  }
+
   .viewport {
-    @apply translate-y-10 scale-0 data-[visible]:scale-100 data-[visible]:translate-y-0 transition-all duration-500 ease-out;
+    @apply translate-y-20 opacity-0 data-[visible]:opacity-100 scale-0 data-[visible]:scale-100 data-[visible]:translate-y-0 transition-all duration-500 ease-out;
   }
 }
 

@@ -1,7 +1,9 @@
 <script>
   import Facts from "$lib/components/home/Facts.svelte";
   import Hero from "$lib/components/home/Hero.svelte";
+  import Services from "$lib/components/home/Services.svelte";
   import Welcome from "$lib/components/home/Welcome.svelte";
+  import Works from "$lib/components/home/Works.svelte";
 </script>
 
 <svelte:head>
@@ -16,21 +18,6 @@
   <Hero />
   <Facts />
   <Welcome />
-
-
-  <section class="">
-    <div class="container">
-
-      <h2 class="text-slate-800 text-center text-2xl md:text-3xl xl:text-4xl font-bold mb-8">Our Services</h2>
-
-      <div>
-
-        <div class="px-4 py-8 bg-white hover:border hover:border-primary">
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
+  <Services />
+  <Works />
 </main>
