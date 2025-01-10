@@ -8,6 +8,8 @@
   import Calendar from '~icons/heroicons-solid/calendar';
   import Close from '~icons/heroicons-solid/x';
   import ArrowRight from '~icons/heroicons-solid/arrow-narrow-right';
+  import ChevronDown from '~icons/heroicons-solid/chevron-down';
+
 
 	let { children } = $props();
 
@@ -85,8 +87,38 @@
         <li class="lg:h-full">
           <a href="/" class="nav-link">Home</a>
         </li>
-        <li class="lg:h-full">
-          <a href="/" class="nav-link">Services</a>
+        <li class="group relative lg:h-full">
+          <div class="nav-link">
+            <span class="flex items-center justify-center gap-1">
+              Services
+              <ChevronDown height="16" width="16" class="" />
+            </span>
+          </div>
+
+          <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-out lg:absolute lg:top-full lg:left-0 w-max lg:z-10">
+            <div class="overflow-hidden">
+              <div class="lg:pt-1 lg:pb-4">
+                <ul class="lg:rounded overflow-hidden lg:p-2 bg-white lg:shadow-md">
+                  <li class="pl-4 lg:px-2 lg:h-10">
+                    <a href="/" class="nav-link dropdown-link">Visit Visa</a>
+                  </li>
+                  <li class="pl-4 lg:px-2 lg:h-10">
+                    <a href="/" class="nav-link dropdown-link">Skilled Worker Visa</a>
+                  </li>
+                  <li class="pl-4 lg:px-2 lg:h-10">
+                    <a href="/" class="nav-link dropdown-link">Graduate Visa</a>
+                  </li>
+                  <li class="pl-4 lg:px-2 lg:h-10">
+                    <a href="/" class="nav-link dropdown-link">Student Visa</a>
+                  </li>
+                  <li class="pl-4 lg:px-2 lg:h-10">
+                    <a href="/" class="nav-link dropdown-link">Spouse Visa</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
         </li>
         <li class="lg:h-full">
           <a href="/" class="nav-link">About</a>
@@ -218,7 +250,11 @@
 
 <style>
   .nav-link {
-    @apply h-full flex items-center px-6 lg:px-2 py-3 lg:py-0 font-medium font-nunito text-lg transition-colors hover:text-primary relative
+    @apply h-full flex items-center px-6 lg:px-2 py-2 lg:py-0 font-medium font-nunito text-lg transition-colors hover:text-primary relative
       after:hidden lg:after:block after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:transition-transform after:duration-300 hover:after:bg-primary after:scale-x-0 hover:after:scale-x-100;
+  }
+
+  .dropdown-link {
+    @apply lg:after:hidden;
   }
 </style>
