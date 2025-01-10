@@ -8,8 +8,8 @@
 
     <div class="grid place-items-center">
       <div>
-        <h2 class="section-title lg:text-left mb-8 scale-100 viewport" use:viewport>Welcome to A2Z Immigration</h2>
-        <div use:viewport class="viewport">
+        <h2 class="section-title lg:text-left mb-12 lg:mb-16 viewport-left indicator lg:indicator-left" use:viewport>Welcome to <br> A2Z Immigration</h2>
+        <div use:viewport class="viewport-left">
           <p class="font-nunito font-medium md:text-lg text-slate-600 mb-6">A2Z Immigration Solution Limited has spent the last 5 years as region leader in UK Immigration Law. We have been a fully OISC regulated immigration firm for over 5 years now and have
             specialised in immigration matters.
           </p>
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="grid place-items-center viewport" use:viewport>
+    <div class="grid place-items-center viewport-right" use:viewport>
       <img src="/images/banner-1.svg" alt="hero banner" class="w-full max-w-md">
     </div>
 

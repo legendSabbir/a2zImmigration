@@ -2,25 +2,53 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-body {
-  @apply bg-slate-100;
-}
 
 @layer base {
   :root {
     --primary-color: 6, 163, 218;
+    --secondary-color: 9, 30, 62;
   }
 
   .container {
     @apply px-4 mx-auto;
   }
 
+  .btn-ripple {
+    @apply relative z-10 after:-z-10 overflow-hidden after:absolute after:inset-0 after:bg-white/20 after:scale-0 hover:after:scale-100 after:transition-transform  after:duration-300 after:ease-out;
+  }
+
+  .indicator {
+    @apply relative before:absolute before:w-[150px] before:left-1/2 before:-ml-[75px] before:h-[5px] before:-bottom-4 before:bg-primary before:rounded-full 
+    after:absolute after:w-1.5 after:left-1/2 after:bg-white after:h-[5px] after:-ml-[75px] after:-bottom-4 after:[animation:indicator-run_3000ms_linear_infinite_alternate];
+  }
+
+  .indicator-left {
+    @apply before:left-0 after:left-0 after:ml-0 before:ml-0;
+  }
+
+  .indicator-sm {
+    @apply relative before:absolute before:w-[90px] before:left-0 before:h-[5px] before:-bottom-3 before:bg-primary before:rounded-full 
+    after:absolute after:w-1.5 after:left-0 after:bg-white after:h-[5px] after:-bottom-3 after:[animation:indicator-run-sm_3000ms_linear_infinite_alternate];
+  }
+
   .section-title {
-    @apply text-slate-800 text-center text-3xl md:text-4xl font-bold;
+    @apply font-nunito text-slate-800 text-center text-3xl md:text-4xl lg:text-5xl font-black;
   }
 
   .viewport {
-    @apply translate-y-20 opacity-0 data-[visible]:opacity-100 scale-0 data-[visible]:scale-100 data-[visible]:translate-y-0 transition-all duration-500 ease-out;
+    @apply translate-y-20 opacity-0 data-[visible]:opacity-100 data-[visible]:translate-y-0 transition-all duration-300 lg:duration-[900ms] ease-out;
+  }
+
+  .viewport-scale {
+    @apply translate-y-20 data-[visible]:translate-y-0 scale-0 opacity-0 data-[visible]:opacity-100 data-[visible]:scale-100 transition-all duration-300 lg:duration-[900ms] ease-out;
+  }
+
+  .viewport-left {
+    @apply -translate-x-60 opacity-0 data-[visible]:opacity-100 data-[visible]:translate-x-0 transition-all duration-300 lg:duration-[900ms] ease-out;
+  }
+
+  .viewport-right {
+    @apply translate-x-60 opacity-0 data-[visible]:opacity-100 data-[visible]:translate-x-0 transition-all duration-300 lg:duration-[900ms] ease-out;
   }
 }
 
@@ -31,4 +59,24 @@ body {
 
 .camera_prev {
   @apply left-0 top-[55%] md:top-1/2 after:text-xl after:font-bold after:p-2 after:content-["\00AB"] after:text-white md:after:bg-white md:after:px-4 md:after:py-3 md:after:text-primary md:after:text-2xl;
+}
+
+@keyframes indicator-run {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(145px);
+  }
+}
+
+@keyframes indicator-run-sm {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(85px);
+  }
 }

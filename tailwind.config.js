@@ -10,6 +10,7 @@ export default {
       },
       colors: {
         'primary': 'rgba(var(--primary-color))',
+        'secondary': 'rgba(var(--secondary-color))',
       },
       screens: {
         'sm': '575px',

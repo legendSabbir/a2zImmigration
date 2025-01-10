@@ -16,7 +16,7 @@ import Facts from "$lib/components/home/Facts.svelte";
   <script src="/lib/camera.js" defer></script>
 </svelte:head>
 
-<main>
+<main class="overflow-hidden">
   <Hero />
   <Facts />
   <Welcome />

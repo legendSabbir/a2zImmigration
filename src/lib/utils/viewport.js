@@ -7,6 +7,8 @@ const io = typeof IntersectionObserver === 'undefined' ? null : new Intersection
       io.unobserve(el);
     }
   })
+}, {
+  rootMargin: '0px 0px 100px 0px'
 });
 
 export function viewport(node) {
