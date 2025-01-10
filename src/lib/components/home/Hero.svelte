@@ -28,17 +28,10 @@
   });
 </script>
 
-<svelte:head>
-  <link rel="stylesheet" href="/lib/camera.css" />
-  <script src="/lib/jquery.js" defer></script>
-  <script src="/lib/jquery.easing.1.3.js" defer></script>
-  <script src="/lib/camera.js" defer></script>
-</svelte:head>
-
 <section>
   <div class="camera_wrap overflow-hidden relative h-[calc(100vh+150px)]" id="camera-slide">
-    <div data-src="images/hero-pattern.svg">
-      <img src="images/hero-pattern.svg" alt="hero-pattern" class="sr-only" />
+    <div data-src="/images/hero-pattern.svg">
+      <img src="/images/hero-pattern.svg" alt="hero-pattern" class="sr-only" />
       <div class="w-11/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-8">
         <div
           class="mx-auto sm:max-w-md md:max-w-xl lg:max-w-2xl -mt-4 lg:mt-0 flex flex-col items-center justify-center text-center"
@@ -60,8 +53,8 @@
       </div>
     </div>
    
-    <div data-src="images/hero-pattern.svg">
-      <img src="images/hero-pattern.svg" alt="hero-pattern" class="sr-only" />
+    <div data-src="/images/hero-pattern.svg">
+      <img src="/images/hero-pattern.svg" alt="hero-pattern" class="sr-only" />
       <div class="w-11/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-8">
         <div
           class="mx-auto sm:max-w-md md:max-w-xl lg:max-w-2xl -mt-4 lg:mt-0 flex flex-col items-center justify-center text-center"

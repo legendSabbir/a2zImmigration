@@ -3,14 +3,16 @@
 @import 'tailwindcss/utilities';
 
 
+.container {
+  @apply px-4 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[992px] lg:px-10 xl:max-w-[1240px] 2xl:max-w-[1400px];
+} 
+/* .container {
+  margin: auto;
+} */
 @layer base {
   :root {
     --primary-color: 6, 163, 218;
     --secondary-color: 9, 30, 62;
-  }
-
-  .container {
-    @apply px-4 mx-auto;
   }
 
   .btn-ripple {
@@ -18,8 +20,8 @@
   }
 
   .indicator {
-    @apply relative before:absolute before:w-[150px] before:left-1/2 before:-ml-[75px] before:h-[5px] before:-bottom-4 before:bg-primary before:rounded-full 
-    after:absolute after:w-1.5 after:left-1/2 after:bg-white after:h-[5px] after:-ml-[75px] after:-bottom-4 after:[animation:indicator-run_3000ms_linear_infinite_alternate];
+    @apply relative before:absolute before:w-[150px] before:left-1/2 before:-ml-[75px] before:h-[5px] before:-bottom-3 lg:before:-bottom-6 before:bg-primary before:rounded-full 
+    after:absolute after:w-1.5 after:left-1/2 after:bg-white after:h-[5px] after:-ml-[75px] after:-bottom-3 lg:after:-bottom-6 after:[animation:indicator-run_3000ms_linear_infinite_alternate];
   }
 
   .indicator-left {
@@ -33,6 +35,11 @@
 
   .section-title {
     @apply font-nunito text-slate-800 text-center text-3xl md:text-4xl lg:text-5xl font-black;
+  }
+
+  .nav-link {
+    @apply h-full flex items-center px-6 lg:px-2 py-2 lg:py-0 font-medium font-nunito text-lg transition-colors hover:text-primary relative
+      after:hidden lg:after:block after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:transition-transform after:duration-300 hover:after:bg-primary after:scale-x-0 hover:after:scale-x-100;
   }
 
   .viewport {

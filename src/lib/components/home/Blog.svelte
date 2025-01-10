@@ -5,8 +5,8 @@
 
 {#snippet blogCard(delay, time, src, title, description)}
 <div class="flex flex-col rounded-xl border bg-white border-slate-200 {delay} viewport relative z-10 after:-z-10 after:absolute after:inset-0 after:transition-shadow after:duration-[400ms] after:rounded-xl hover:after:shadow-xl after:ease-out" use:viewport>
-  <figure class="w-full aspect-square max-h-[350px] overflow-hidden">
-    <img {src} alt="blog thumbnail" height="150" width="150" class="w-full h-full object-cover hover:scale-110 duration-300 transition-transform">
+  <figure class="w-full aspect-square max-h-[350px] rounded-xl overflow-hidden">
+    <img {src} alt="blog thumbnail" height="150" width="150" loading="lazy" class="w-full h-full object-cover hover:scale-110 duration-300 transition-transform">
   </figure>
 
   <div class="flex-1 p-4 lg:p-6 flex flex-col">

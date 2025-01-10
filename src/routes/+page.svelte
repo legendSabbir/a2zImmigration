@@ -1,6 +1,6 @@
 <script>
   import Blog from "$lib/components/home/Blog.svelte";
-import Facts from "$lib/components/home/Facts.svelte";
+  import Facts from "$lib/components/home/Facts.svelte";
   import Hero from "$lib/components/home/Hero.svelte";
   import Message from "$lib/components/home/Message.svelte";
   import Services from "$lib/components/home/Services.svelte";
@@ -11,9 +11,10 @@ import Facts from "$lib/components/home/Facts.svelte";
 <svelte:head>
   <title>A2Z ImmiMigration</title>
   <link rel="stylesheet" href="/lib/camera.css" />
-  <script src="/lib/jquery.js" defer></script>
-  <script src="/lib/jquery.easing.1.3.js" defer></script>
-  <script src="/lib/camera.js" defer></script>
+  <script src="/lib/jquery.js"></script>
+  <script src="/lib/jquery.easing.1.3.js"></script>
+  <script src="/lib/camera.js"></script>
+  <link rel="preload" href="/images/hero-pattern.svg" as="image">
 </svelte:head>
 
 <main class="overflow-hidden">

@@ -36,6 +36,17 @@
     };
   }
 
+  function toggleDropdownMobile() {
+    const sibling = this.nextElementSibling;
+
+    if (sibling.hasAttribute("data-active")) {
+      sibling.removeAttribute("data-active");
+    } else {
+      sibling.setAttribute("data-active", "");
+    }
+  }
+
+
 </script>
  
 <div class="absolute h-16" use:viewportHeader></div>
@@ -88,31 +99,31 @@
           <a href="/" class="nav-link">Home</a>
         </li>
         <li class="group relative lg:h-full">
-          <div class="nav-link">
+          <button class="nav-link w-full" onclick={toggleDropdownMobile}>
             <span class="flex items-center justify-center gap-1">
               Services
               <ChevronDown height="16" width="16" class="" />
             </span>
-          </div>
+          </button>
 
-          <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-out lg:absolute lg:top-full lg:left-0 w-max lg:z-10">
+          <div class="grid grid-rows-[0fr] data-[active]:grid-rows-[1fr] lg:data-[active]:grid-rows-[0fr] lg:group-hover:grid-rows-[1fr] transition-all duration-300 ease-out lg:absolute lg:top-full lg:left-0 w-max lg:z-10">
             <div class="overflow-hidden">
               <div class="lg:pt-1 lg:pb-4">
-                <ul class="lg:rounded overflow-hidden lg:p-2 bg-white lg:shadow-md">
-                  <li class="pl-4 lg:px-2 lg:h-10">
-                    <a href="/" class="nav-link dropdown-link">Visit Visa</a>
+                <ul class="lg:rounded-md overflow-hidden lg:p-2 bg-white lg:border-2 border-slate-200 lg:shadow-md">
+                  <li class="pl-4 lg:px-2 lg:h-10 lg:hover:bg-slate-100 rounded transition-colors">
+                    <a href="/" class="nav-link lg:after:hidden">Visit Visa</a>
                   </li>
-                  <li class="pl-4 lg:px-2 lg:h-10">
-                    <a href="/" class="nav-link dropdown-link">Skilled Worker Visa</a>
+                  <li class="pl-4 lg:px-2 lg:h-10 lg:hover:bg-slate-100 rounded transition-colors">
+                    <a href="/" class="nav-link lg:after:hidden ">Skilled Worker Visa</a>
                   </li>
-                  <li class="pl-4 lg:px-2 lg:h-10">
-                    <a href="/" class="nav-link dropdown-link">Graduate Visa</a>
+                  <li class="pl-4 lg:px-2 lg:h-10 lg:hover:bg-slate-100 rounded transition-colors">
+                    <a href="/" class="nav-link lg:after:hidden">Graduate Visa</a>
                   </li>
-                  <li class="pl-4 lg:px-2 lg:h-10">
-                    <a href="/" class="nav-link dropdown-link">Student Visa</a>
+                  <li class="pl-4 lg:px-2 lg:h-10 lg:hover:bg-slate-100 rounded transition-colors">
+                    <a href="/" class="nav-link lg:after:hidden">Student Visa</a>
                   </li>
-                  <li class="pl-4 lg:px-2 lg:h-10">
-                    <a href="/" class="nav-link dropdown-link">Spouse Visa</a>
+                  <li class="pl-4 lg:px-2 lg:h-10 lg:hover:bg-slate-100 rounded transition-colors">
+                    <a href="/" class="nav-link lg:after:hidden">Spouse Visa</a>
                   </li>
                 </ul>
               </div>
@@ -150,111 +161,101 @@
 {@render children()}
 
 
-<footer class="bg-secondary text-white viewport" use:viewport>
-  <div class="container grid md:grid-cols-2 gap-10 lg:grid-cols-3 lg:gap-16 xl:gap-20 xl:grid-cols-4 lg:max-w-[1280px]">
-
-    <div class="p-6 bg-primary text-white">
-      <a href="/" class="block py-3 mb-2">
-        <img src="/a2zimmigration-logo.png" alt="A2Z ImmiMigration" width="298" height="91" class="w-40 xl:w-56">
-      </a>
-
-      <p class="font-medium mb-6">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.</p>
-
-      <div class="flex h-12">
-        <input type="text" class="min-w-0 flex-1">
-        <button class="px-4 shrink-0 bg-secondary">Sign up</button>
+<footer class="overflow-hidden">
+  <div class="bg-secondary text-white viewport" use:viewport>
+    <div class="container grid md:grid-cols-2 gap-10 lg:grid-cols-3 lg:gap-16 xl:gap-20 xl:grid-cols-[1.2fr_1fr_1fr_200px] lg:max-w-[1280px]">
+  
+      <div class="p-6 bg-primary text-white">
+        <a href="/" class="block py-3 mb-2">
+          <img src="/a2zimmigration-logo.png" alt="A2Z ImmiMigration" width="298" height="91" class="w-40 xl:w-56">
+        </a>
+  
+        <p class="font-medium mb-6">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.</p>
+  
+        <div class="flex h-12">
+          <input type="email" class="w-0 flex-1 text-secondary px-4">
+          <button class="px-4 shrink-0 bg-secondary">Sign up</button>
+        </div>
+  
       </div>
-
+  
+      <div class="py-4 lg:py-10">
+        <h2 class="text-2xl font-nunito font-bold mb-10 indicator-sm">Get in touch</h2>
+  
+        <ul class="space-y-2">
+          <li>
+            <a href="/" class="flex items-center gap-1.5">
+              <Phone width="16" height="16" class="text-primary" />
+              <span>+44 7441 398273</span>
+            </a>
+          </li>
+          <li>
+            <a href="/" class="flex items-center gap-1.5">
+              <Calendar width="16" height="16" class="text-primary" />
+              <span>Mon-Fri: 9:00 – 17:00</span>
+            </a>
+          </li>
+          <li>
+            <a href="/" class="flex items-center gap-1.5">
+              <Mail width="16" height="16" class="text-primary" />
+              <span>info@example.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="/" class="flex items-center gap-1.5">
+              <Location width="16" height="16" class="text-primary" />
+              <span>123 Street, New York, NY 10012</span>
+            </a>
+          </li>
+          <li class="text-sm pl-5 pt-1">
+            Registered Company in the UK – Company Number SC659958
+          </li>
+        </ul>
+      </div>
+  
+      <div class="py-4 lg:py-10">
+        <h2 class="text-2xl font-nunito font-bold mb-10 indicator-sm">Services</h2>
+  
+        <ul class="space-y-2">
+          <li class="hover:translate-x-2 transition-transform ease-linear">
+            <a href="/" class="flex items-center gap-1.5">
+              <ArrowRight width="16" height="16" class="text-primary" />
+              <span>Visit Visa</span>
+            </a>
+          </li>
+          <li class="hover:translate-x-2 transition-transform ease-linear">
+            <a href="/" class="flex items-center gap-1.5">
+              <ArrowRight width="16" height="16" class="text-primary" />
+              <span>Skilled Worker Visa</span>
+            </a>
+          </li>
+          <li class="hover:translate-x-2 transition-transform ease-linear">
+            <a href="/" class="flex items-center gap-1.5">
+              <ArrowRight width="16" height="16" class="text-primary" />
+              <span>Graduate Visa</span>
+            </a>
+          </li>
+          <li class="hover:translate-x-2 transition-transform ease-linear">
+            <a href="/" class="flex items-center gap-1.5">
+              <ArrowRight width="16" height="16" class="text-primary" />
+              <span>Student Visa</span>
+            </a>
+          </li>
+          <li class="hover:translate-x-2 transition-transform ease-linear">
+            <a href="/" class="flex items-center gap-1.5">
+              <ArrowRight width="16" height="16" class="text-primary" />
+              <span>Spouse Visa</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="py-4 lg:py-10 xl:-translate-x-10 max-w-max">
+        <img src="/images/OISC-icon.png" height="432" width="578" class="block w-24" loading="lazy" alt="oisc icon">
+        <p class="text-sm mt-1">OISC Member</p>
+        <p class="text-sm">F202100303</p>
+      </div>
+  
     </div>
-
-    <div class="py-4 lg:py-10">
-      <h2 class="text-2xl font-nunito font-bold mb-10 indicator-sm">Get in touch</h2>
-
-      <ul class="space-y-2">
-        <li>
-          <a href="/" class="flex items-center gap-1.5">
-            <Phone width="16" height="16" class="text-primary" />
-            <span>+44 7441 398273</span>
-          </a>
-        </li>
-        <li>
-          <a href="/" class="flex items-center gap-1.5">
-            <Calendar width="16" height="16" class="text-primary" />
-            <span>Mon-Fri: 9:00 – 17:00</span>
-          </a>
-        </li>
-        <li>
-          <a href="/" class="flex items-center gap-1.5">
-            <Mail width="16" height="16" class="text-primary" />
-            <span>info@example.com</span>
-          </a>
-        </li>
-        <li>
-          <a href="/" class="flex items-center gap-1.5">
-            <Location width="16" height="16" class="text-primary" />
-            <span>123 Street, New York, NY 10012</span>
-          </a>
-        </li>
-        <li class="text-sm ml-5 pt-1">
-          Registered Company in the UK – Company Number SC659958
-        </li>
-      </ul>
-    </div>
-
-    <div class="py-4 lg:py-10">
-      <h2 class="text-2xl font-nunito font-bold mb-10 indicator-sm">Services</h2>
-
-      <ul class="space-y-2">
-        <li class="hover:translate-x-2 transition-transform ease-linear">
-          <a href="/" class="flex items-center gap-1.5">
-            <ArrowRight width="16" height="16" class="text-primary" />
-            <span>Visit Visa</span>
-          </a>
-        </li>
-        <li class="hover:translate-x-2 transition-transform ease-linear">
-          <a href="/" class="flex items-center gap-1.5">
-            <ArrowRight width="16" height="16" class="text-primary" />
-            <span>Skilled Worker Visa</span>
-          </a>
-        </li>
-        <li class="hover:translate-x-2 transition-transform ease-linear">
-          <a href="/" class="flex items-center gap-1.5">
-            <ArrowRight width="16" height="16" class="text-primary" />
-            <span>Graduate Visa</span>
-          </a>
-        </li>
-        <li class="hover:translate-x-2 transition-transform ease-linear">
-          <a href="/" class="flex items-center gap-1.5">
-            <ArrowRight width="16" height="16" class="text-primary" />
-            <span>Student Visa</span>
-          </a>
-        </li>
-        <li class="hover:translate-x-2 transition-transform ease-linear">
-          <a href="/" class="flex items-center gap-1.5">
-            <ArrowRight width="16" height="16" class="text-primary" />
-            <span>Spouse Visa</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="py-4 lg:py-10 xl:-translate-x-10 max-w-max">
-      <img src="/images/OISC-icon.png" height="432" width="578" class="block w-24" alt="oisc icon">
-      <p class="text-sm mt-1">OISC Member</p>
-      <p class="text-sm">F202100303</p>
-    </div>
-
   </div>
 </footer>
-
-
-<style>
-  .nav-link {
-    @apply h-full flex items-center px-6 lg:px-2 py-2 lg:py-0 font-medium font-nunito text-lg transition-colors hover:text-primary relative
-      after:hidden lg:after:block after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:transition-transform after:duration-300 hover:after:bg-primary after:scale-x-0 hover:after:scale-x-100;
-  }
-
-  .dropdown-link {
-    @apply lg:after:hidden;
-  }
-</style>

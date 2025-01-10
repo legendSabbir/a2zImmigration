@@ -34,7 +34,7 @@
       </div>
   
       <div class="grid place-items-center delay-200 viewport-scale" use:viewport>
-        <img src="/images/banner-2.svg" alt="hero banner" height="923" width="1142" class="w-full max-w-md">
+        <img src="/images/banner-2.svg" alt="hero banner" loading="lazy" height="923" width="1142" class="w-full max-w-md">
       </div>
 
     </div>
