@@ -13,7 +13,7 @@
       "use strict";
       $("#camera-slide").camera({
         height: '50%',
-        minHeight: Math.min(window.innerHeight + 150, 1100) + "px",
+        minHeight: Math.min(window.innerHeight - (window.innerWidth >= 968 ? 112 : 64), 1000) + "px",
 	      thumbnails: false,
         hover: true,
         fx: 'random',
@@ -28,11 +28,12 @@
   });
 </script>
 
-<section>
-  <div class="camera_wrap overflow-hidden relative h-[calc(100vh+150px)]" id="camera-slide">
-    <div data-src="/images/hero-pattern.svg">
-      <img src="/images/hero-pattern.svg" alt="hero-pattern" class="sr-only" />
-      <div class="w-11/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-8">
+<section>  
+  <div class="camera_wrap overflow-hidden relative mt-16 lg:mt-[112px] h-[calc(100vh)]" id="camera-slide">
+    <div data-src="/images/hero-1.jpg" class="">
+      <div class="after:absolute after:inset-0 after:bg-[rgba(9,30,62,.7)] after:pointer-events-none after:z-10 motion-preset-fade"></div>
+
+      <div class="w-11/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 -mt-8">
         <div
           class="mx-auto sm:max-w-md md:max-w-xl lg:max-w-2xl -mt-4 lg:mt-0 flex flex-col items-center justify-center text-center"
         >
@@ -53,9 +54,10 @@
       </div>
     </div>
    
-    <div data-src="/images/hero-pattern.svg">
-      <img src="/images/hero-pattern.svg" alt="hero-pattern" class="sr-only" />
-      <div class="w-11/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-8">
+    <div data-src="/images/hero-2.jpg">
+      <div class="after:absolute after:inset-0 after:bg-[rgba(9,30,62,.7)] after:pointer-events-none after:z-10 motion-preset-fade"></div>
+
+      <div class="w-11/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 -mt-8">
         <div
           class="mx-auto sm:max-w-md md:max-w-xl lg:max-w-2xl -mt-4 lg:mt-0 flex flex-col items-center justify-center text-center"
         >

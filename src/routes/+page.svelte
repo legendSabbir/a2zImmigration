@@ -14,7 +14,8 @@
   <script src="/lib/jquery.js"></script>
   <script src="/lib/jquery.easing.1.3.js"></script>
   <script src="/lib/camera.js"></script>
-  <link rel="preload" href="/images/hero-pattern.svg" as="image">
+  <link rel="preload" href="/images/hero-1.jpg" as="image">
+  <link rel="preload" href="/images/hero-2.jpg" as="image">
 </svelte:head>
 
 <main class="overflow-hidden">
