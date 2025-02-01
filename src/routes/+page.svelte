@@ -1,5 +1,6 @@
 <script>
   import Blog from "$lib/components/home/Blog.svelte";
+  import BrandCarousel from "$lib/components/home/BrandCarousel.svelte";
   import Facts from "$lib/components/home/Facts.svelte";
   import Hero from "$lib/components/home/Hero.svelte";
   import Message from "$lib/components/home/Message.svelte";
@@ -21,6 +22,7 @@
 <main class="overflow-hidden">
   <Hero />
   <Facts />
+  <BrandCarousel />
   <Welcome />
   <Services />
   <Works />

@@ -20,6 +20,9 @@ importers:
       '@iconify-json/mdi':
         specifier: ^1.2.2
         version: 1.2.2
+      '@iconify-json/tabler':
+        specifier: ^1.2.15
+        version: 1.2.15
       '@iconify-json/wpf':
         specifier: ^1.2.0
         version: 1.2.0
@@ -219,6 +222,9 @@ packages:
 
   '@iconify-json/mdi@1.2.2':
     resolution: {integrity: sha512-84aznJXzfGdbOXGe8xB7E5uNAb7Yo5IABwTgq2X3kczb819qZeS9eL31bTVn7wJdCLK5ieaoUc2GTS3QYIkJ6g==}
+
+  '@iconify-json/tabler@1.2.15':
+    resolution: {integrity: sha512-EMEOt1PubLxcbwHMO9XmHT601A/2fCNd7fK50p5Qh42xvVxCvO3YhhGuGMAk6t6VkdSZYLQ14Y2bYPcom1aFeQ==}
 
   '@iconify-json/wpf@1.2.0':
     resolution: {integrity: sha512-sA5z2Fy0rh6+wSMlXpj5Of4oRXZTn84zQFo2yWTtjbN5WTrH52iJrT4KLmepnF8l5VAsf+WbeXsQLFFhlVeDFA==}
@@ -1138,6 +1144,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/mdi@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/tabler@1.2.15':
     dependencies:
       '@iconify/types': 2.0.0
 

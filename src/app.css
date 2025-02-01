@@ -34,7 +34,7 @@
   }
 
   .section-title {
-    @apply font-nunito text-slate-800 text-center text-3xl md:text-4xl lg:text-5xl font-black;
+    @apply font-nunito text-slate-800 text-center text-2xl md:text-3xl lg:text-4xl font-black;
   }
 
   .nav-link {
@@ -58,7 +58,11 @@
     @apply translate-x-60 opacity-0 data-[visible]:opacity-100 data-[visible]:translate-x-0 transition-all duration-300 lg:duration-[900ms] ease-out;
   }
 }
+/* bg-[rgba(9,30,62,.7) */
 
+.camera_overlayer {
+  @apply bg-[rgba(9,30,62,.7)]
+}
 
 .camera_next {
   @apply right-0 md:right-1 top-[55%] md:top-1/2 after:text-xl after:font-bold after:p-2 after:content-["\00BB"] after:text-white  md:after:bg-white md:after:px-4 md:after:py-3 md:after:text-primary md:after:text-2xl;
