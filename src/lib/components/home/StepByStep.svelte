@@ -54,7 +54,7 @@
       </div>
       <div class="grid md:grid-cols-2">
         {@render arrowIcon("absolute top-28 right-6 scale-x-[-1] hidden")}
-        {@render stepByStepCard(3, "Become a Licenced Sponsor", "As a sponsor, you have to track employee records, report any changes in employment status, and monitor visa expiration dates.", "A2zImmigrations keeps you ready for Home Office audits and helps with essential compliance management to avoid costly penalties", "Stay Compliant and Audit-Ready")}
+        {@render stepByStepCard(4, "Become a Licenced Sponsor", "As a sponsor, you have to track employee records, report any changes in employment status, and monitor visa expiration dates.", "A2zImmigrations keeps you ready for Home Office audits and helps with essential compliance management to avoid costly penalties", "Stay Compliant and Audit-Ready")}
       </div>
     </div>
 
