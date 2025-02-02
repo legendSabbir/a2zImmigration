@@ -36,8 +36,12 @@
 
 <style>
   .slide {
-    animation: slide 25s linear infinite;
+    animation: slide 35s linear infinite;
   }
+
+  /* .slider:hover .slide {
+    animation-play-state: paused;
+  } */
 
   .row-2 .slide { animation-direction: reverse; }
 

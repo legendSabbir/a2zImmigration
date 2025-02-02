@@ -10,7 +10,7 @@
 </li>
 {/snippet}
 
-<section class="pt-4 pb-8 lg:py-24">
+<section class="pt-20 pb-8 lg:py-24">
   <div class="container">
     <div class=" grid gap-14 lg:gap-20 lg:grid-cols-2 max-w-[1024px] mx-auto">
 
