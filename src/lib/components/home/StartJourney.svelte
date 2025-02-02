@@ -1,4 +1,4 @@
-<section class="mt-4 py-10 lg:py-20 bg-primary text-white">
+<section class="mt-10 py-10 lg:py-20 lg:mt-40 bg-primary text-white">
   <div class="container grid gap-12 lg:gap-20 lg:grid-cols-12">
 
     <figure class="h-[220px] md:h-[250px] lg:h-[380px] relative overflow-hidden lg:col-span-7 lg:order-1">

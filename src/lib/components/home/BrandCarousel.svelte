@@ -22,7 +22,7 @@
 <div class="py-[72px] lg:py-28 bg-primary mt-16 lg:mt-0">
   <p class="font-bold px-4 text-white text-center md:text-xl lg:text-2xl mb-10 md:mb-16 lg:mb-20">Trusted by UK Employers Across Industries</p>
 
-  <div class="relative flex mb-6 md:mb-10 lg:mb-20 slider">
+  <div class="relative flex mb-2 md:mb-10 lg:mb-10 slider">
     {@render brandRow()}
     {@render brandRow()}
     {@render brandRow()}

@@ -10,7 +10,7 @@
 {/snippet}
 
 
-<section class="py-20 lg:py-28">
+<section class="py-10 lg:py-16 mt-10 lg:mt-40">
   <div class="container grid gap-10 lg:gap-20 lg:grid-cols-2">
 
     <div class="grid place-items-center viewport-left" use:viewport>

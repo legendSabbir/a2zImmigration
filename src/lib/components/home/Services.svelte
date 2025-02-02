@@ -27,19 +27,23 @@
 {/snippet}
 
 
-<section class="pb-20">
+<section class="py-10 mt-4 md:mt-10 lg:mt-40">
   <div class="container">
 
-    <h2 class="section-title mb-12 lg:mb-20 indicator viewport" use:viewport>How we can help you?</h2>
+    <h2 class="section-title mb-12 lg:mb-20 indicator viewport" use:viewport>
+      How we can help you?
+      <br>
+      Immigration support for your business <br> — all through a single platform
+    </h2>
     <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 lg:gap-6">
       {@render servicesCard(Check, "Expert Eligibility Assessment", "lg:delay-[200ms]", "We evaluate your business to ensure it meets Home Office requirements.")}
       {@render servicesCard(Check, "Comprehensive Application Support", "lg:delay-[400ms]", "We handle the entire application process, minimising errors and delays.")}
       {@render servicesCard(Check, "Support Maintenance and Guidance on Compliance & Record-Keeping", "lg:delay-[600ms]", "We help you meet all legal obligations to maintain your licence.")}
-      {@render servicesCard(Check, "Tailored Advice on Skilled Worker Sponsorship", "lg:delay-[200ms]", "We assist in identifying roles that qualify under the UK visa system.")}
+      <!-- {@render servicesCard(Check, "Tailored Advice on Skilled Worker Sponsorship", "lg:delay-[200ms]", "We assist in identifying roles that qualify under the UK visa system.")}
       {@render servicesCard(Check, "Mock Audits & Home Office Readiness Checks", "lg:delay-[400ms]", "We provide intensive training and prepare you for Home Office inspections to ensure a successful outcome.")}
       {@render servicesCard(Check, "Ongoing Licence Management Support", "lg:delay-[600ms]", "We assist with licence renewals, reporting duties, and HR compliance updates.")}
       {@render servicesCard(Check, "Help with Certificate of Sponsorship (CoS) Allocation", "lg:delay-[200ms]", "We guide you through assigning sponsorship certificates to employees.")}
-      {@render servicesCard(Check, "Support with Appeals & Reapplications", "lg:delay-[400ms]", "If your application is refused, we provide strategic assistance to rectify issues and eventually your Licence will be granted.")}
+      {@render servicesCard(Check, "Support with Appeals & Reapplications", "lg:delay-[400ms]", "If your application is refused, we provide strategic assistance to rectify issues and eventually your Licence will be granted.")} -->
     </div>
   </div>
 </section>
