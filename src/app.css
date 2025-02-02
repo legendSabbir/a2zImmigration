@@ -4,7 +4,7 @@
 
 
 .container {
-  @apply px-4 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[992px] lg:px-10 xl:max-w-[1240px] 2xl:max-w-[1400px];
+  @apply px-4 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[992px] lg:px-10 xl:max-w-[1240px] 2xl:max-w-[1440px];
 } 
 /* .container {
   margin: auto;

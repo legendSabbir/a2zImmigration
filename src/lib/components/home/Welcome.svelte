@@ -3,9 +3,9 @@
 </script>
 
 {#snippet listItem(content)}
-  <li class="mb-3 flex gap-4 text-slate-600">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="rotate-90"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18l-7 3l7-18l7 18zm0 0v-5"/></svg>
-    <span class="font-medium">{content}</span>
+  <li class="mb-5 md:mb-4 flex gap-4 text-slate-600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="rotate-90 shrink-0"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18l-7 3l7-18l7 18zm0 0v-5"/></svg>
+    <span class="font-medium text-sm md:text-base">{content}</span>
   </li>
 {/snippet}
 

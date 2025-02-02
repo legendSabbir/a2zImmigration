@@ -1,57 +1,43 @@
 <script>
   import { viewport } from '$lib/utils/viewport';
-  import Passport from '~icons/mdi/passport-check';
-  import Worker from '~icons/ic/round-construction';
-  import Graduate from '~icons/fa-solid/user-graduate';
-  import Renew from '~icons/wpf/renew-subscription';
-  import Check from '~icons/heroicons-solid/badge-check';
-  import Euro from '~icons/heroicons-solid/currency-euro';
-  import Apartment from '~icons/ic/round-apartment';
-  import Student from '~icons/ic/round-school';
-  import License from '~icons/mdi/drivers-license';
-  import Hand from '~icons/fa-solid/hand-holding-heart';
-  import Business from '~icons/mdi/business-outline';
-  import ArrowRight from '~icons/heroicons-solid/arrow-right';
+  import Star from '~icons/tabler/star';
+  import Link from '~icons/tabler/external-link';
+  import Send from '~icons/tabler/send';
+  import Check from '~icons/tabler/discount-check';
 </script>
 
 {#snippet servicesCard(Icon, title, _class, description)}
-<div class="relative group rounded-xl">
-  <div class="bg-sky-100 px-4 sm:px-6 md:px-4 xl:px-6 pt-8 pb-8 flex flex-col items-center justify-center gap-8 rounded-lg relative viewport-scale {_class}" use:viewport>
-    <div class="p-3 lg:p-5 bg-primary text-white flex items-center justify-center rotate-45">
-      <Icon height="40" width="40" class="-rotate-45 size-8 lg:size-10" />
-    </div>
-  
-    <div>
-      <h3 class="text-center text-xl font-bold text-slate-800 mb-2">{title}</h3> 
-      <p class="line-clamp-2 text-slate-600 font-nunito font-medium mb-2">{description}</p>
-    </div>
-
+<div class="p-4 md:p-6 bg-sky-50 rounded-xl shadow viewport-scale {_class}" use:viewport>
+  <div class="mt-6 md:mt-0 mb-3 md:mb-4 flex items-center justify-center md:justify-start">
+    <span class="p-2.5 bg-sky-200 text-slate-800 inline-flex items-center justify-center rounded-md border border-sky-100">
+      <Icon height="20" width="20" />
+    </span>
   </div>
-  <a href="/" class="px-4 py-3 bg-primary text-white absolute z-20 bottom-0 left-1/2 -translate-x-1/2 translate-y-[100%] opacity-0 group-hover:opacity-100 group-hover:translate-y-1/2 transition-all duration-[500ms] ease-out">
-    <ArrowRight height="24" width="24" />
+
+  <h2 class="text-sky-950 text-2xl md:text-2xl font-nunito font-bold xl:font-black text-center md:text-left mb-3">{title}</h2>
+
+  <p class="text-slate-600 text-center mb-6 text-sm md:text-left md:text-base xl:text-lg">{description}</p>
+
+  <a href="/" class="flex items-center justify-center w-full h-10 md:h-12 rounded-md bg-primary text-white font-bold font-nunito btn-ripple">
+    Learn more
+    <Link height="20" width="20" class="ml-1 translate-x-1" />
   </a>
+
 </div>
 {/snippet}
+
+
 
 <section class="pb-20">
   <div class="container">
 
-    <h2 class="section-title mb-12 lg:mb-20 viewport indicator" use:viewport>Our Services</h2>
+    <h2 class="section-title mb-8 lg:mb-12 viewport indicator lg:after:-bottom-4 lg:before:-bottom-4" use:viewport>How we can help you?</h2>
+    <p class="text-center mb-8 lg:mb-16 text-slate-600 viewport" use:viewport>Immigration support for your business <br> — all through a single platform</p>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10">
-      {@render servicesCard(Passport, "Visit Visa", "lg:delay-[200ms]", "The Visit Visa is designed for individuals who wish to visit the UK for tourism, leisure, business, or to meet family and friends. It allows you to stay in the UK for a limited period, typically up to six months, depending on the purpose of your visit.")}
-      {@render servicesCard(Worker, 'Skilled Worker Visa', 'lg:delay-[400ms]',"The Skilled Worker Visa is part of the UK’s Points-Based Immigration System, designed to enable employers to hire skilled workers from overseas. This visa replaced the Tier 2 (General) Visa and is open to both EU and non-EU citizens.")}
-      {@render servicesCard(Student, 'Student Visa', 'lg:delay-[600ms]', "We offer comprehensive services to helping aspiring students achieve their academic dreams by providing expert assistance in securing offers.")}
-      {@render servicesCard(Graduate, 'Graduate Visa', 'lg:delay-[200ms]', "The UK Graduate visa allows international students to remain in the UK for a limited period after completing their studies. We provide specialist Home Office application support.")}
-      {@render servicesCard(Passport, 'Spouse Visa', 'lg:delay-[400ms]', "The Spouse Visa allows British citizens and settled individuals (those with Indefinite Leave to Remain) in the UK to bring their foreign spouses.")}
-      {@render servicesCard(Passport, 'ADR Visa', 'lg:delay-[600ms]', "The Adult Dependent Relative Visa is intended for non-EEA (European Economic Area) adult individuals who are dependent on a close family member settled in the UK. This visa allows eligible dependents to join their family members in the UK and receive the care and support they need.")}
-      {@render servicesCard(Renew, 'Renew Passport', 'lg:delay-[200ms]', "The Adult Dependent Relative Visa is intended for non-EEA (European Economic Area) adult individuals who are dependent on a close family.")}
-      {@render servicesCard(Check, 'Indefinite Leave to Remain', 'lg:delay-[400ms]', "The UK Graduate visa allows international students to remain in the UK for a limited period after completing their studies. We provide specialist Home Office application support.")}
-      {@render servicesCard(Euro, 'EU Settlement Scheme', 'lg:delay-[600ms]', "The Adult Dependent Relative Visa is intended for non-EEA (European Economic Area) adult individuals who are dependent on a close family member settled in the UK. This visa allows eligible dependents to join their family members in the UK and receive the care and support they need.")}
-      {@render servicesCard(License, 'Sponsor License', 'lg:delay-[200ms]', "The Adult Dependent Relative Visa is intended for non-EEA (European Economic Area) adult individuals who are dependent on a close family member settled in the UK. This visa allows eligible dependents to join their family members in the UK and receive the care and support they need.")}
-      {@render servicesCard(Hand, 'Naturalisation', 'lg:delay-[400ms]', "The Adult Dependent Relative Visa is intended for non-EEA (European Economic Area) adult individuals who are dependent on a close family member settled in the UK. This visa allows eligible dependents to join their family members in the UK and receive the care and support they need.")}
-      {@render servicesCard(Business, 'Entrepreneur Extension Visa', 'lg:delay-[600ms]', "The Adult Dependent Relative Visa is intended for non-EEA (European Economic Area) adult individuals who are dependent on a close family member settled in the UK. This visa allows eligible dependents to join their family members in the UK and receive the care and support they need.")}
+    <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 lg:gap-6">
+      {@render servicesCard(Star, "Sponsor Licence", "lg:delay-[200ms]", "We guide you through every step of sponsor licence application, so you can bring in the skilled talent your team needs — without the hassle")}
+      {@render servicesCard(Send, "Skilled Worker Visa", "lg:delay-[400ms]", "We’ll take care of the whole visa process — from eligibility checks to paperwork — making it easy for your chosen candidates to join your team")}
+      {@render servicesCard(Check, "Compliance and Audit", "lg:delay-[600ms]", "We provide ongoing support to keep your sponsor status safe and avoid costly penalties — from record —keeping to prepping for Home Office audits")}
     </div>
-
   </div>
 </section>
