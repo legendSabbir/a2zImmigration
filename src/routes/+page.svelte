@@ -6,6 +6,7 @@
   import Message from "$lib/components/home/Message.svelte";
   import Services from "$lib/components/home/Services.svelte";
   import StartJourney from "$lib/components/home/StartJourney.svelte";
+  import StepByStep from "$lib/components/home/StepByStep.svelte";
   import Welcome from "$lib/components/home/Welcome.svelte";
   import Works from "$lib/components/home/Works.svelte";
 </script>
@@ -16,8 +17,6 @@
   <script src="/lib/jquery.js"></script>
   <script src="/lib/jquery.easing.1.3.js"></script>
   <script src="/lib/camera.js"></script>
-  <link rel="preload" href="/images/hero-1.jpg" as="image">
-  <link rel="preload" href="/images/hero-2.jpg" as="image">
 </svelte:head>
 
 <main class="overflow-hidden">
@@ -27,6 +26,7 @@
   <Welcome />
   <Services />
   <StartJourney />
+  <StepByStep />
   <Works />
   <Message />
   <Blog />
