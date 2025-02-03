@@ -114,16 +114,19 @@
           
         </li>
         <li class="lg:h-full">
-          <a href="/" class="nav-link">About</a>
+          <a href="/" class="nav-link">Our clients</a>
         </li>
         <li class="lg:h-full">
-          <a href="/" class="nav-link">FAQs</a>
+          <a href="/" class="nav-link">About us</a>
         </li>
         <li class="lg:h-full">
           <a href="/" class="nav-link">Blog</a>
         </li>
         <li class="lg:h-full">
-          <a href="/" class="nav-link">Contact</a>
+          <a href="/" class="nav-link">Free stuff</a>
+        </li>
+        <li class="lg:h-full">
+          <a href="/" class="nav-link">Testimonials</a>
         </li>
       </ul>      
     </nav>
@@ -162,7 +165,10 @@
       </div>
   
       <div class="py-4 lg:py-10">
-        <h2 class="text-2xl font-nunito font-bold mb-10 indicator-sm">Get in touch</h2>
+        <h2 class="text-2xl font-nunito font-bold mb-10 relative">
+          Get in touch
+          <span class="indicator indicator-sm"></span>
+        </h2>
   
         <ul class="space-y-2">
           <li>
@@ -196,7 +202,10 @@
       </div>
   
       <div class="py-4 lg:py-10">
-        <h2 class="text-2xl font-nunito font-bold mb-10 indicator-sm">Services</h2>
+        <h2 class="text-2xl font-nunito font-bold mb-10 relative">
+          Services
+          <span class="indicator indicator-sm"></span>
+        </h2>
   
         <ul class="space-y-2">
           <li class="hover:translate-x-2 transition-transform ease-linear">

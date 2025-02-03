@@ -28,7 +28,10 @@
 <section class="py-20">
   <div class="container">
 
-    <h2 class="section-title mb-20 indicator viewport" use:viewport>Blog & News</h2>
+    <h2 class="section-title mb-20 relative viewport" use:viewport>
+      Blog & News
+      <span class="indicator"></span>
+    </h2>
 
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
       {@render blogCard("lg:delay[200ms]", 'DECEMBER 19, 2024', '/images/blog-1.jpeg', 'Unlock Your Future in the UK_ All About the New Entrant Skill Visa', 'Start your UK career with the New Entrant Skill Visa—low barriers, great opportunities, tailored support.')}

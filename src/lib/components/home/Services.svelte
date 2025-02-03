@@ -30,11 +30,13 @@
 <section class="py-10 mt-4 md:mt-10 lg:mt-40">
   <div class="container">
 
-    <h2 class="section-title mb-12 lg:mb-20 indicator viewport" use:viewport>
+    <h2 class="section-title relative mb-10 lg:mb-12 viewport" use:viewport>
       How we can help you?
-      <br>
-      Immigration support for your business <br> — all through a single platform
+      <span class="indicator"></span>
     </h2>
+
+    <p class="text-center text-slate-600 mb-12 lg:mb-16 text-sm lg:text-base"> Immigration support for your business <br> — all through a single platform</p>
+
     <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 lg:gap-6">
       {@render servicesCard(Check, "Expert Eligibility Assessment", "lg:delay-[200ms]", "We evaluate your business to ensure it meets Home Office requirements.")}
       {@render servicesCard(Check, "Comprehensive Application Support", "lg:delay-[400ms]", "We handle the entire application process, minimising errors and delays.")}

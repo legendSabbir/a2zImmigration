@@ -18,8 +18,26 @@
   }
 
   .indicator {
+    @apply absolute w-[150px] h-[5px] rounded-full overflow-hidden before:absolute before:inset-0 before:bg-primary after:absolute after:h-full after:w-1.5 after:bg-white after:left-0 after:top-0 
+    -bottom-4 left-1/2 -translate-x-1/2
+    after:animate-indicator-run;
+  }
+
+  .indicator-left {
+    @apply left-0 translate-x-0;
+  }
+
+  .indicator-sm {
+    @apply w-[90px] left-0 translate-x-0 -bottom-3;
+  }
+
+  /* .indicator {
     @apply relative before:absolute before:w-[150px] before:left-1/2 before:-ml-[75px] before:h-[5px] before:-bottom-3 lg:before:-bottom-6 before:bg-primary before:rounded-full 
     after:absolute after:w-1.5 after:left-1/2 after:bg-white after:h-[5px] after:-ml-[75px] after:-bottom-3 lg:after:-bottom-6 after:[animation:indicator-run_3000ms_linear_infinite_alternate];
+  }
+
+  .indicator-el {
+    @apply relative w-[150px] h-[5px] rounded-full overflow-hidden before:absolute before:inset-0 before:bg-primary after:absolute after:h-full after:w-1.5 after:bg-red-600 after:left-0 after:top-0 
   }
 
   .indicator-left {
@@ -29,7 +47,7 @@
   .indicator-sm {
     @apply relative before:absolute before:w-[90px] before:left-0 before:h-[5px] before:-bottom-3 before:bg-primary before:rounded-full 
     after:absolute after:w-1.5 after:left-0 after:bg-white after:h-[5px] after:-bottom-3 after:[animation:indicator-run-sm_3000ms_linear_infinite_alternate];
-  }
+  } */
 
   .section-title {
     @apply font-nunito text-slate-800 text-center text-2xl md:text-3xl lg:text-4xl font-black;
@@ -56,7 +74,6 @@
     @apply translate-x-60 opacity-0 data-[visible]:opacity-100 data-[visible]:translate-x-0 transition-all duration-300 lg:duration-[900ms] ease-out;
   }
 }
-/* bg-[rgba(9,30,62,.7) */
 
 .camera_overlayer {
   @apply bg-[rgba(9,30,62,.7)]
@@ -72,11 +89,11 @@
 
 @keyframes indicator-run {
   0% {
-    transform: translateX(0px);
+    left: -6px;
   }
 
   100% {
-    transform: translateX(145px);
+    left: 100%;
   }
 }
 

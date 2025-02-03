@@ -18,6 +18,9 @@ export default {
         'xl': '1280px',
         '2xl': '1440px',
       },
+      animation: {
+        'indicator-run': 'indicator-run 3000ms linear infinite alternate',
+      }
     }
   },
 

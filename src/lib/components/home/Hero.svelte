@@ -24,8 +24,6 @@
       <h1 class="font-nunito sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-3 lg:mb-5 motion-scale-in-[0] motion-opacity-in-[0%] motion-duration-[1500ms] motion-ease-out-cubic">
         Get your Sponsor Licence & Work Permit Visas
         with Comprehensive Immigration Support.
-        <br class="hidden md:inline">
-        Let us help you
       </h1>
       <button
         class="bg-white text-primary text-sm md:text-base lg:text-lg font-bold font-nunito px-6 py-3 lg:px-10 lg:py-4 rounded-full mt-10 hover:bg-sky-500 hover:text-white outline outline-1 outline-offset-4 outline-white transition-colors duration-300 motion-translate-x-in-[0%] motion-translate-y-in-[43%] motion-opacity-in-[0%] motion-duration-[0.74s]/opacity motion-ease-spring-smooth"

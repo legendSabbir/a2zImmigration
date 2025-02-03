@@ -11,13 +11,13 @@
     <img src="./images/step-{num}.png" alt="step by step" class="w-full h-full object-cover">
   </figure>
 
-  <p class="mb-4 text-lg text-slate-600">{description1}</p>
+  <p class="mb-4 text-sm sm:text-base lg:text-lg text-slate-600">{description1}</p>
 
-  <p class="text-lg mb-6 text-slate-600">{description2}</p>
+  <p class="text-sm sm:text-base lg:text-lg mb-6 text-slate-600">{description2}</p>
 
-  <a href="/" class="group text-2xl font-bold text-primary flex items-center gap-1">
+  <a href="/" class="group text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-primary flex items-center gap-1">
     {cta}
-    <ArrowRight class="ml-1 text-primary group-hover:translate-x-2 duration-500 transition-all" height="28" width="28" />
+    <ArrowRight class="ml-1 text-primary group-hover:translate-x-2 duration-500 transition-all lg:size-7" height="20" width="20" />
   </a>
 </div>
 {/snippet}
@@ -34,12 +34,13 @@
 <section class="py-10 mt-10 lg:mt-40">
   <div class="container">
 
-    <h2 class="section-title mb-20 lg:mb-32 indicator viewport" use:viewport>
+    <h2 class="section-title mb-20 lg:mb-32 relative viewport" use:viewport>
       Step-by-Step Guide to UK
       <br> Skilled Worker Visa Sponsorship
+      <span class="indicator -bottom-6 lg:w-[300px]"></span>
     </h2>
 
-    <div class="max-w-[940px] mx-auto space-y-6 md:space-y-2">
+    <div class="max-w-[940px] mx-auto space-y-10 md:space-y-2">
       <div class="grid md:grid-cols-2">
         {@render stepByStepCard(1, "Become a Licenced Sponsor", "Apply for a sponsor licence to hire international talent.", "We guide you through preparing and submitting the application, ensuring all documentation meets Home Office requirements.", "Get your sponsor licence")}
         {@render arrowIcon("absolute top-28 left-6")}

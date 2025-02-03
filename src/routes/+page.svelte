@@ -27,7 +27,5 @@
   <Services />
   <StartJourney />
   <StepByStep />
-  <Works />
-  <Message />
   <Blog />
 </main>
