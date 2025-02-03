@@ -4,6 +4,7 @@
   import Facts from "$lib/components/home/Facts.svelte";
   import Hero from "$lib/components/home/Hero.svelte";
   import Message from "$lib/components/home/Message.svelte";
+  import Reviews from "$lib/components/home/Reviews.svelte";
   import Services from "$lib/components/home/Services.svelte";
   import StartJourney from "$lib/components/home/StartJourney.svelte";
   import StepByStep from "$lib/components/home/StepByStep.svelte";
@@ -13,10 +14,6 @@
 
 <svelte:head>
   <title>A2Z ImmiMigration</title>
-  <link rel="stylesheet" href="/lib/camera.css" />
-  <script src="/lib/jquery.js"></script>
-  <script src="/lib/jquery.easing.1.3.js"></script>
-  <script src="/lib/camera.js"></script>
 </svelte:head>
 
 <main class="overflow-hidden">
@@ -27,5 +24,6 @@
   <Services />
   <StartJourney />
   <StepByStep />
+  <Reviews />
   <Blog />
 </main>

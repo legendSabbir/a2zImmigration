@@ -25,7 +25,7 @@
 {/snippet}
 
 
-<section class="py-20">
+<section class="py-20 mt-10">
   <div class="container">
 
     <h2 class="section-title mb-20 relative viewport" use:viewport>

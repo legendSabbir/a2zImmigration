@@ -3,15 +3,16 @@
 @import 'tailwindcss/utilities';
 
 
-.container {
-  @apply px-4 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[992px] lg:px-10 xl:max-w-[1240px] 2xl:max-w-[1480px];
-} 
-
 @layer base {
   :root {
     --primary-color: 6, 163, 218;
     --secondary-color: 9, 30, 62;
   }
+
+
+  .container {
+    @apply px-4 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[992px] lg:px-10 xl:max-w-[1240px] 2xl:max-w-[1480px];
+  } 
 
   .btn-ripple {
     @apply relative z-10 after:-z-10 overflow-hidden after:absolute after:inset-0 after:bg-white/20 after:scale-0 hover:after:scale-100 after:transition-transform  after:duration-300 after:ease-out;
@@ -30,24 +31,6 @@
   .indicator-sm {
     @apply w-[90px] left-0 translate-x-0 -bottom-3;
   }
-
-  /* .indicator {
-    @apply relative before:absolute before:w-[150px] before:left-1/2 before:-ml-[75px] before:h-[5px] before:-bottom-3 lg:before:-bottom-6 before:bg-primary before:rounded-full 
-    after:absolute after:w-1.5 after:left-1/2 after:bg-white after:h-[5px] after:-ml-[75px] after:-bottom-3 lg:after:-bottom-6 after:[animation:indicator-run_3000ms_linear_infinite_alternate];
-  }
-
-  .indicator-el {
-    @apply relative w-[150px] h-[5px] rounded-full overflow-hidden before:absolute before:inset-0 before:bg-primary after:absolute after:h-full after:w-1.5 after:bg-red-600 after:left-0 after:top-0 
-  }
-
-  .indicator-left {
-    @apply before:left-0 after:left-0 after:ml-0 before:ml-0;
-  }
-
-  .indicator-sm {
-    @apply relative before:absolute before:w-[90px] before:left-0 before:h-[5px] before:-bottom-3 before:bg-primary before:rounded-full 
-    after:absolute after:w-1.5 after:left-0 after:bg-white after:h-[5px] after:-bottom-3 after:[animation:indicator-run-sm_3000ms_linear_infinite_alternate];
-  } */
 
   .section-title {
     @apply font-nunito text-slate-800 text-center text-2xl md:text-3xl lg:text-4xl font-black;
@@ -97,12 +80,54 @@
   }
 }
 
-@keyframes indicator-run-sm {
-  0% {
-    transform: translateX(0px);
-  }
+.owl-dots {
+  @apply absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center justify-center;
+}
 
-  100% {
-    transform: translateX(85px);
-  }
+.owl-dot {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  background: #DDDDDD;
+  border-radius: 2000px;
+  transition: .5s;
+}
+
+.owl-dot.active {
+  width: 30px;
+  background: rgb(var(--primary-color));
+}
+
+.owl-item.center {
+  position: relative;
+  z-index: 1;
+}
+
+.owl-stage-outer {
+  @apply py-10;
+}
+
+.owl-item.center {
+  position: relative;
+  z-index: 1;
+}
+
+.owl-item > div {
+  transition: .5s;
+}
+
+.owl-item.center > div {
+  background: #FFFFFF !important;
+  box-shadow: 0 0 30px #DDDDDD;
+  @apply ring-1 ring-primary ring-inset;
+}
+
+.owl-nav {
+  @apply hidden md:flex absolute top-1/2 -translate-y-1/2 -inset-x-16 flex items-center justify-between;
+}
+
+.owl-nav .nav-btn {
+  @apply size-12 flex items-center justify-center rounded-full bg-primary text-white hover:text-black transition-colors duration-300 ease-out;
 }

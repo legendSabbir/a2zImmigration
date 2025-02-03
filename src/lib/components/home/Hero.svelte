@@ -25,9 +25,10 @@
         Get your Sponsor Licence & Work Permit Visas
         with Comprehensive Immigration Support.
       </h1>
-      <button
+      <a
+        href="/contact"
         class="bg-white text-primary text-sm md:text-base lg:text-lg font-bold font-nunito px-6 py-3 lg:px-10 lg:py-4 rounded-full mt-10 hover:bg-sky-500 hover:text-white outline outline-1 outline-offset-4 outline-white transition-colors duration-300 motion-translate-x-in-[0%] motion-translate-y-in-[43%] motion-opacity-in-[0%] motion-duration-[0.74s]/opacity motion-ease-spring-smooth"
-        >Book a free consultation</button>
+        >Book a free consultation</a>
     </div>
   </div>
 </div>

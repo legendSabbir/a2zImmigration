@@ -9,7 +9,11 @@
   import Close from '~icons/heroicons-solid/x';
   import ArrowRight from '~icons/heroicons-solid/arrow-narrow-right';
   import ChevronDown from '~icons/heroicons-solid/chevron-down';
+  import { setFormContext } from '$lib/form-context';
+  import ContactForm from '$lib/components/ContactForm.svelte';
 
+  const formState = $state({ isOpen: false });
+  setFormContext(formState);
 
 	let { children } = $props();
 
@@ -45,7 +49,6 @@
       sibling.setAttribute("data-active", "");
     }
   }
-
 
 </script>
  
@@ -144,6 +147,8 @@
 </header>
 
 {@render children()}
+<ContactForm />
+
 
 
 <footer class="overflow-hidden">
