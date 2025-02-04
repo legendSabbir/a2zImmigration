@@ -10,6 +10,8 @@
   import StepByStep from "$lib/components/home/StepByStep.svelte";
   import Welcome from "$lib/components/home/Welcome.svelte";
   import Works from "$lib/components/home/Works.svelte";
+
+  // get in touch button bellow why you need sponsor licence
 </script>
 
 <svelte:head>

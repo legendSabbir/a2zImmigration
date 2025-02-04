@@ -1,33 +1,25 @@
-<script>
-  const images = [
-    "https://s3.nationbetter.uk/Caprice_8e3db5d1cd.svg 1x, https://s3.nationbetter.uk/Caprice_8e3db5d1cd.svg 2x",
-    "https://s3.nationbetter.uk/Thingtrax_d455fb06c8.svg 1x, https://s3.nationbetter.uk/Thingtrax_d455fb06c8.svg 2x",
-    "https://s3.nationbetter.uk/Arora_34c8ccc58e.svg 1x, https://s3.nationbetter.uk/Arora_34c8ccc58e.svg 2x",
-    "https://s3.nationbetter.uk/Penhellis_1e34fe840a.svg 1x, https://s3.nationbetter.uk/Penhellis_1e34fe840a.svg 2x",
-    "https://s3.nationbetter.uk/Lumen_35d0521664.svg 1x, https://s3.nationbetter.uk/Lumen_35d0521664.svg 2x",
-    "https://s3.nationbetter.uk/Tatu_d244f1d499.svg 1x, https://s3.nationbetter.uk/Tatu_d244f1d499.svg 2x",
-    "https://s3.nationbetter.uk/In_Paella_Limited_3a8f383f0a.svg 1x, https://s3.nationbetter.uk/In_Paella_Limited_3a8f383f0a.svg 2x",
-    "https://s3.nationbetter.uk/Tortilla_ff8fb1ccbb.svg 1x, https://s3.nationbetter.uk/Tortilla_ff8fb1ccbb.svg 2x"
-  ];
-</script>
-
 {#snippet brandRow()}
 <div class="shrink-0 flex items-center slide">
-  {#each images as img}
-    <img srcset={img} alt="brand logo" class="h-10 w-16 mr-8 md:mr-12 lg:mr-20 sm:w-24 md:w-28 lg:w-36 xl:w-40 shrink-0 hover:scale-125 duration-500 transition-transform">
-  {/each}
+  <img src="/images/logo-1.png" class="w-28 md:w-36 md:mr-4 lg:mr-8 lg:w-44 hover:scale-125 transition-transform duration-500" alt="brand logo">
+  <img src="/images/logo-2.png" class="w-28 md:w-36 md:mr-4 lg:mr-8 lg:w-44 hover:scale-125 transition-transform duration-500" alt="brand logo">
+  <img src="/images/logo-3.png" class="w-12 -ml-2 mr-7 md:w-14 md:mr-12 lg:mr-20 lg:w-20 hover:scale-125 transition-transform duration-500" alt="brand logo">
+  <img src="/images/logo-4.png" class="w-20 mr-7 md:w-24 md:mr-10 lg:mr-[72px] lg:w-36 hover:scale-125 transition-transform duration-500" alt="brand logo">
+  <img src="/images/logo-5.png" class="w-12 mr-4 md:w-14 md:mr-8 lg:mr-10 lg:w-20 hover:scale-125 transition-transform duration-500" alt="brand logo">
+  <img src="/images/logo-6.png" class="w-16 mr-6 md:w-20 md:mr-12 lg:mr-20 lg:w-28 hover:scale-125 transition-transform duration-500" alt="brand logo">
+  <img src="/images/logo-7.jpeg" class="w-9 mr-7 md:w-10 md:mr-12 lg:mr-20 lg:w-16 hover:scale-125 transition-transform duration-500" alt="brand logo">
+  <img src="/images/logo-8.png" class="w-14 mr-6 md:w-16 md:mr-12 lg:mr-20 lg:w-24 hover:scale-125 transition-transform duration-500" alt="brand logo">
 </div>
 {/snippet}
 
-<div class="py-[72px] lg:py-28 bg-primary mt-16 lg:mt-0">
-  <p class="font-bold px-4 text-white text-center md:text-xl lg:text-2xl mb-10 md:mb-16 lg:mb-20">Trusted by UK Employers Across Industries</p>
+<div class="py-[72px] lg:py-28 mt-16 lg:mt-24">
+  <h3 class="font-bold px-4 text-slate-800 text-center md:text-xl lg:text-2xl mb-10 md:mb-16">Trusted by UK Employers Across Industries</h3>
 
-  <div class="relative flex mb-2 md:mb-10 lg:mb-10 slider">
+  <div class="relative flex slider h-20 lg:h-28 lg:mb-6">
     {@render brandRow()}
     {@render brandRow()}
     {@render brandRow()}
   </div>
-  <div class="relative flex row-2 slider">
+  <div class="relative flex row-2 h-20 lg:h-28 slider">
     {@render brandRow()}
     {@render brandRow()}
     {@render brandRow()}
@@ -54,12 +46,12 @@
     width: var(--size);
     top: 0;
     left: 0;
-    background: linear-gradient(90deg, rgb(var(--primary-color)) 51.55%, rgb(var(--primary-color), 0.1) 85.21%);
+    background: linear-gradient(90deg, white 51.55%, rgb(255, 255, 255, 0.1) 85.21%);
   }
   .slider::after { 
     left: auto;
     right: 0;
-    background: linear-gradient(270deg, rgb(var(--primary-color)) 51.55%, rgb(var(--primary-color), 0.1) 85.21%);
+    background: linear-gradient(270deg, white 51.55%, rgb(255, 255, 255, 0.1) 85.21%);
    }
 
 

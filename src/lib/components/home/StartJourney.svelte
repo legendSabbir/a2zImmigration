@@ -1,3 +1,8 @@
+<script>
+
+  import GetInTouch from "../GetInTouch.svelte";
+
+</script>
 <section class="mt-10 py-10 lg:py-20 lg:mt-40 bg-primary text-white">
   <div class="container grid gap-12 lg:gap-20 lg:grid-cols-12">
 
@@ -9,9 +14,7 @@
       <div class="max-w-sm">
         <h2 class="font-nunito text-2xl md:text-3xl lg:text-4xl font-black mb-1">Start your journey with us</h2>
         <p class="mb-6 lg:mb-10 text-sm font-medium text-white/70 md:text-base">Expand your team with international talent <br> — worry-free</p>
-        <a href="/" class="inline-flex items-center justify-center px-6 h-10 md:h-12 rounded-md bg-white text-primary font-bold font-nunito text-sm lg:text-base hover:bg-sky-400 hover:text-white transition-colors duration-500">
-          Get in touch
-        </a>
+        <GetInTouch class="inline-flex items-center justify-center px-6 h-10 md:h-12 rounded-md bg-white text-primary font-bold font-nunito text-sm lg:text-base hover:bg-sky-400 hover:text-white transition-colors duration-500" />
       </div>
     </div>
 

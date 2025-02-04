@@ -9,7 +9,6 @@
     --secondary-color: 9, 30, 62;
   }
 
-
   .container {
     @apply px-4 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[992px] lg:px-10 xl:max-w-[1240px] 2xl:max-w-[1480px];
   } 
@@ -81,7 +80,7 @@
 }
 
 .owl-dots {
-  @apply absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center justify-center;
+  @apply absolute -bottom-2 lg:-bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center;
 }
 
 .owl-dot {
@@ -93,11 +92,14 @@
   background: #DDDDDD;
   border-radius: 2000px;
   transition: .5s;
+
+  @apply lg:size-6
 }
 
 .owl-dot.active {
   width: 30px;
   background: rgb(var(--primary-color));
+  @apply lg:w-10
 }
 
 .owl-item.center {
@@ -121,11 +123,11 @@
 .owl-item.center > div {
   background: #FFFFFF !important;
   box-shadow: 0 0 30px #DDDDDD;
-  @apply ring-1 ring-primary ring-inset;
+  @apply ring-1 ring-primary ring-inset md:ring-2;
 }
 
 .owl-nav {
-  @apply hidden md:flex absolute top-1/2 -translate-y-1/2 -inset-x-16 flex items-center justify-between;
+  @apply hidden md:flex absolute top-1/2 -translate-y-1/2 -inset-x-16 items-center justify-between;
 }
 
 .owl-nav .nav-btn {

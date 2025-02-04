@@ -1,5 +1,6 @@
 <script>
   import { viewport } from '$lib/utils/viewport';
+  import GetInTouch from '../GetInTouch.svelte';
 </script>
 
 {#snippet listItem(content)}
@@ -10,20 +11,20 @@
 {/snippet}
 
 
-<section class="py-10 lg:py-16 mt-10 lg:mt-40">
+<section class="py-10 lg:py-16 mt-10 lg:mt-32">
   <div class="container grid gap-10 lg:gap-20 lg:grid-cols-2">
 
     <div class="grid place-items-center viewport-left" use:viewport>
       <img src="/images/banner-1.svg" alt="hero banner" loading="lazy" class="w-full max-w-md">
     </div>
 
-    <div class="grid place-items-center">
+    <div class="grid place-items-center viewport-right" use:viewport>
       <div>
-        <h2 class="section-title relative lg:text-left mb-12 lg:mb-14 viewport-right" use:viewport>
+        <h2 class="section-title relative lg:text-left mb-12 lg:mb-14">
           Why You Need Sponsor Licence?
           <span class="indicator lg:indicator-left lg:w-full lg:after:[animation-duration:7000ms]"></span>
         </h2>
-        <ul>
+        <ul class="mb-8">
           {@render listItem("Recruit Skilled Workers from Outside UK to fill talent gaps.")}
           {@render listItem("Hire Right Talent to drive Innovation and Business Growth.")}
           {@render listItem("Support your Business Expansion Plan")}
@@ -31,6 +32,8 @@
           {@render listItem("Allow you to legally employ non-UK workers")}
           {@render listItem("Long term Staff Retention & Peace of Mind")}
         </ul>
+
+        <GetInTouch class="inline-flex items-center justify-center px-6 h-10 md:h-12 rounded-md bg-primary text-white font-bold font-nunito text-sm lg:text-base hover:text-black btn-ripple transition-colors duration-500" />
       </div>
     </div>
 

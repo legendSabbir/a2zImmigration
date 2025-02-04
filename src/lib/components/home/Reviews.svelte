@@ -69,7 +69,7 @@
     </h2>
     
     <div class="owl-carousel relative carousel viewport" use:viewport>
-      {#each { length: 6 } as _, index}
+      {#each { length: 5 } as _, index}
         {@render testimonials()}
       {/each}
     </div>

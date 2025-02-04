@@ -35,7 +35,7 @@
       <span class="indicator"></span>
     </h2>
 
-    <p class="text-center text-slate-600 mb-12 lg:mb-16 text-sm lg:text-base"> Immigration support for your business <br> — all through a single platform</p>
+    <p class="text-center text-slate-600 mb-12 lg:mb-16 text-sm lg:text-lg font-semibold viewport" use:viewport> Immigration support for your business <br> — all through a single platform</p>
 
     <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 lg:gap-6">
       {@render servicesCard(Check, "Expert Eligibility Assessment", "lg:delay-[200ms]", "We evaluate your business to ensure it meets Home Office requirements.")}

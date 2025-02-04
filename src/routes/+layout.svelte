@@ -9,11 +9,21 @@
   import Close from '~icons/heroicons-solid/x';
   import ArrowRight from '~icons/heroicons-solid/arrow-narrow-right';
   import ChevronDown from '~icons/heroicons-solid/chevron-down';
+  import Message from '~icons/tabler/message';
   import { setFormContext } from '$lib/form-context';
   import ContactForm from '$lib/components/ContactForm.svelte';
+  import GetInTouch from '$lib/components/GetInTouch.svelte';
 
   const formState = $state({ isOpen: false });
   setFormContext(formState);
+
+  /* $effect(() => {
+    if (formState.isOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  }) */
 
 	let { children } = $props();
 
@@ -134,13 +144,18 @@
       </ul>      
     </nav>
 
-    <button class="px-6 py-3 bg-primary font-bold text-lg text-white rounded font-nunito btn-ripple transition-colors hidden lg:block shrink-0">Get in touch</button>
+    <GetInTouch class="px-6 py-3 bg-primary font-bold text-lg text-white rounded font-nunito btn-ripple transition-colors hidden lg:block shrink-0" />
 
     <button class="fixed inset-0 h-screen w-screen bg-black/40 lg:hidden" class:hidden={!isNavOpen} aria-label="nav overlay" onclick={() => isNavOpen = false}></button>
     
-    <button class="p-3 lg:hidden" onclick={() => isNavOpen = true}>
-      <Menu width="24" height="24" />
-    </button>
+    <div class="lg:hidden flex items-center">
+      <button class="p-3" onclick={() => formState.isOpen = true}>
+        <Message width="24" height="24" />
+      </button>
+      <button class="p-3" onclick={() => isNavOpen = true}>
+        <Menu width="24" height="24" />
+      </button>
+    </div>
 
   </div>
 
